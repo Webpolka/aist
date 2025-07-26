@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 27" width="26" height="27">
+	<title>Группа 1</title>
+	<style>
+		.s0 { fill: #ff9548;stroke: #ff9548;stroke-miterlimit:100;stroke-width: 1.2 } 
+	</style>
+	<g id="Группа 1">
+		<path id="Прямоугольник 2" fill-rule="evenodd" class="s0" d="m4.8 2.3h6.6v9.6h-9.6v-6.6c0-1.6 1.4-3 3-3z"/>
+		<path id="Прямоугольник 2 копия" fill-rule="evenodd" class="s0" d="m14.6 2.3h6.6c1.6 0 3 1.4 3 3v6.6h-9.6z"/>
+		<path id="Прямоугольник 2 копия 2" fill-rule="evenodd" class="s0" d="m14.6 15.1h9.6v5.6c0 2.2-1.8 4-4 4h-5.6z"/>
+		<path id="Прямоугольник 2 копия 3" fill-rule="evenodd" class="s0" d="m1.8 15.1h9.6v9.6h-6.6c-1.6 0-3-1.4-3-3z"/>
+	</g>
+</svg>

@@ -1,0 +1,228 @@
+/*---------------------------------------------------------------------------------------------------------------------
+RENTAL AND REDEMPTION SECTION
+----------------------------------------------------------------------------------------------------------------------*/
+.section-redemption {
+	margin-bottom: rem(150);
+
+	@include xl {
+		margin-bottom: rem(100);
+	}
+	@include md {
+		margin-bottom: rem(80);
+	}
+	h2,
+	.section-title {
+		font-size: rem(46);
+		font-weight: 800;
+		color: var(--black);
+
+		text-transform: uppercase;
+		text-align: center;
+
+		margin-bottom: rem(45);
+		@include md {
+			font-size: rem(36);
+			margin-bottom: rem(35);
+		}
+
+		@include sm {
+			font-size: rem(28);
+			margin-bottom: rem(30);
+		}
+	}
+}
+
+.redemption {
+	display: flex;
+	flex-direction: column;
+	gap: rem(50);
+
+	border-radius: rem(42);
+	background-color: #cdcdcd;
+	padding: rem(60) rem(25);
+
+	&_row {
+		position: relative;
+
+		display: grid;
+		align-items: center;
+		grid-template-columns: 6fr 4fr;
+		gap: rem(15);
+
+		@include lg {
+			grid-template-columns: 1fr;
+			grid-template-rows: 2fr;
+			gap: rem(8);
+		}
+
+		&:before {
+			position: absolute;
+			top: rem(-16);
+			left: 5%;
+			content: "";
+			width: rem(90);
+			height: rem(16);
+			background-color: var(--accent);
+		}
+	}
+
+	&_grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: rem(25);
+
+		@include lg {
+			gap: rem(15);
+		}
+		@include sm {
+			gap: rem(8);
+		}
+
+		.black-item {
+			display: flex;
+			flex-direction: column;
+			small,
+			strong {
+				position: relative;
+				top: rem(-5);
+				@media (max-width: 710px) {
+					line-height: 125%;
+				}
+				@media (max-width: 510px) {
+					top: rem(-2);
+				}
+			}
+		}
+	}
+
+	&_col {
+		display: flex;
+		justify-content: flex-end;
+		position: relative;
+		.black-item {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 64%;
+		}
+		.blue-item {
+			width: 39%;
+			padding-left: 3%;
+
+			@media (max-width: 510px) {
+				width: 40%;
+			}
+		}
+	}
+
+	.black-item {
+		font-size: rem(26);
+
+		letter-spacing: 0px;
+		line-height: rem(29);
+		color: #ffffff;
+		font-weight: 800;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: var(--white);
+		min-height: rem(92);
+		border-radius: rem(13);
+		box-shadow: inset 1.634px 2.516px 3.5px rgba(0, 0, 0, 0.88);
+		background-color: #333333;
+
+		@media (max-width: 1100px) {
+			font-size: rem(22);
+		}
+
+		@include lg {
+			font-size: rem(26);
+		}
+		@media (max-width: 710px) {
+			font-size: rem(18);
+			min-height: rem(72);
+		}
+		@media (max-width: 510px) {
+			font-size: rem(15);
+			min-height: rem(67);
+		}
+
+		@media (max-width: 440px) {
+			width: 100%;
+		}
+
+		small {
+			display: block;
+			font-size: rem(17);
+			letter-spacing: 0;
+			font-weight: 200;
+			text-align: center;
+			@media (max-width: 710px) {
+				font-size: rem(15);
+			}
+			@media (max-width: 440px) {
+				font-size: rem(13);
+			}
+		}
+
+		strong {
+			display: block;
+			font-size: rem(32);
+			letter-spacing: 0;
+			font-weight: 500;
+			text-align: center;
+
+			@media (max-width: 710px) {
+				font-size: rem(24);
+			}
+			@media (max-width: 510px) {
+				font-size: rem(21);
+			}
+		}
+	}
+	.blue-item {
+		font-size: rem(26);
+		letter-spacing: 0px;
+		line-height: rem(29);
+		color: #ffffff;
+		font-weight: 800;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: var(--white);
+		min-height: rem(92);
+		border-radius: 13px;
+		box-shadow: inset 1.634px 2.516px 3.5px rgba(8, 5, 9, 0.64);
+		background-color: #0066cc;
+
+		@media (max-width: 1100px) {
+			font-size: rem(22);
+		}
+
+		@include lg {
+			font-size: rem(26);
+		}
+
+		@media (max-width: 710px) {
+			font-size: rem(18);
+			min-height: rem(72);
+		}
+
+		@media (max-width: 510px) {
+			font-size: rem(15);
+			min-height: rem(67);
+		}
+
+		@media (max-width: 440px) {
+			min-height: rem(124);
+			width: 100%;
+			align-items: flex-end;
+			padding-bottom: rem(15);
+		}
+	}
+}

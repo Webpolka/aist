@@ -1,0 +1,79 @@
+/*---------------------------------------------------------------------------------------------------------------------
+HEADER
+----------------------------------------------------------------------------------------------------------------------*/
+.site-header {
+    margin-bottom: rem(50);
+	&_row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include sm {
+			flex-wrap: wrap;
+		}
+	}
+	.row-group {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(135);
+
+		flex-shrink: 0;
+
+		@include lg {
+			gap: rem(45);
+		}
+		@media (max-width: 615px) {
+			gap: rem(10);
+		}
+		@include sm {
+			width: 100%;
+		}
+	}
+	&_buttons {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(25);
+
+		@include lg {
+			gap: rem(15);
+		}
+		@include sm {
+			margin-top: rem(20);
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+
+	.btn-call {
+		flex-shrink: 0;
+	}
+	.flex-group {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+	}
+
+	.logo {
+		img,
+		svg {
+			aspect-ratio: 198/59;
+			width: rem(198);
+
+			@include lg {
+				width: rem(140);
+			}
+		}
+		h1 {
+			margin-top: -4.5%;
+			margin-left: 3%;
+
+			font-size: rem(12.5);
+			font-weight: 400;
+			letter-spacing: 1px;
+
+			color: var(--black);
+			@include lg {
+				font-size: rem(8);
+			}
+		}
+	}
+}
