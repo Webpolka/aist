@@ -35,7 +35,7 @@ body {
 }
 .container {
 	margin-inline: auto;
-	max-inline-size: var(--container-width);	
+	max-inline-size: var(--container-width);
 	padding-inline: var(--container-padding);
 }
 .container-full {
@@ -70,35 +70,35 @@ body {
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap; 
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
 }
 
 .screen-reader-text {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+	position: absolute;
+	left: -9999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 .screen-reader-text:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  clip: auto;
-  background: #000; /* или другой фон для выделения */
-  color: #fff; /* цвет текста */
-  padding: 8px;
-  z-index: 1000;
+	position: static;
+	width: auto;
+	height: auto;
+	clip: auto;
+	background: #000; /* или другой фон для выделения */
+	color: #fff; /* цвет текста */
+	padding: 8px;
+	z-index: 1000;
 }
 
 .site-wrapper {
@@ -114,14 +114,22 @@ body {
 	position: relative;
 	flex: 1 1 auto;
 }
-.sm-visible{
+.sm-visible {
 	display: none;
-	@include sm{
+	@include sm {
 		display: block;
 	}
 }
-.sm-hidden{
-	@include sm{
+.sm-hidden {
+	@include sm {
 		display: none;
 	}
+}
+.color-accent {
+	color: var(--accent);
+	font-weight: 700;
+}
+.color-blue {
+	color: #3182d4;
+	font-weight: 700;
 }

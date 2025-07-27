@@ -1,0 +1,143 @@
+/*---------------------------------------------------------------------------------------------------------------------
+INCREASE INCOME SECTION
+----------------------------------------------------------------------------------------------------------------------*/
+.section-increase-income {
+	margin-bottom: rem(150);
+
+	@include xl {
+		margin-bottom: rem(120);
+	}
+	@include md {
+		margin-bottom: rem(100);
+	}
+	.section-title {
+		font-size: rem(36);
+		line-height: rem(36);
+		color: var(--white);
+		font-weight: 700;
+
+		margin-bottom: rem(30);
+
+		@include md {
+			font-size: rem(36);
+			margin-bottom: rem(25);
+		}
+
+		@include sm {
+			font-size: rem(28);
+			margin-bottom: rem(20);
+		}
+		@media (max-width: 440px) {
+			font-size: rem(21);
+		}
+	}
+}
+
+.increase {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+
+	&-bird {
+		position: absolute;
+		bottom: rem(-40);
+		left: 0;
+		aspect-ratio: 388/609;
+
+		transform: translateX(-10%);
+		width: 32%;
+	}
+
+	&-tile {
+		position: relative;
+		width: 85%;
+		border-radius: rem(36);
+		background-color: var(--blue);
+
+		padding: rem(100) rem(35) rem(40) rem(100);
+
+		aspect-ratio: 100/55;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: rem(10);
+			top: rem(10);
+			display: block;
+			aspect-ratio: 1/1;
+			width: rem(58);
+			background-image: url("../../images/block-1/bublik.png");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: center center;
+		}
+		&_header {
+			p {
+				font-size: rem(29);
+				line-height: rem(36);
+				color: var(--white);
+				font-weight: 300;
+			}
+			.color-accent,
+			.color-blue {
+				font-weight: 300;
+			}
+		}
+
+		&_footer {
+			display: grid;
+			grid-template-columns: 55fr 45fr;
+			gap: rem(40);
+			align-items: center;
+		}
+
+		&_arrows {
+			width: 100%;
+		}
+
+		&_btn {
+			--btn-radius: 40px;
+			position: relative;
+
+			height: rem(81);
+			border-radius: var(--btn-radius);
+			filter: drop-shadow(10.893px 16.773px 12px rgba(0, 94, 168, 0.51));
+			background-color: #ff9548;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			padding-inline: rem(20);
+
+			font-size: rem(29);
+			color: var(--white);
+			font-weight: 700;
+			text-transform: uppercase;
+
+			box-shadow: 10px 5px 12px 12px rgb(0, 94, 168, 0.9);
+            // transition: all 0.3s ease-in-out;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: var(--btn-radius);
+				background: linear-gradient(155deg, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%);               
+			}
+
+			&:hover {
+                box-shadow: 10px 5px 12px 12px rgb(0, 94, 168, 0.2);
+				&:before {
+					background: transparent;
+				}
+			}
+		}
+	}
+}

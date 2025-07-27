@@ -1,0 +1,327 @@
+/*---------------------------------------------------------------------------------------------------------------------
+HOW IT COAST 
+----------------------------------------------------------------------------------------------------------------------*/
+.section-cost {
+	margin-bottom: rem(150);
+
+	@include xl {
+		margin-bottom: rem(100);
+	}
+	@include md {
+		margin-bottom: rem(80);
+	}
+	.section-title {
+		font-size: rem(36);
+		line-height: 100%;
+		font-weight: 700;
+		color: var(--black);
+		text-align: center;
+
+		margin-bottom: rem(30);
+		@include md {
+			font-size: rem(36);
+			margin-bottom: rem(25);
+		}
+
+		@include sm {
+			font-size: rem(28);
+			margin-bottom: rem(20);
+		}
+	}
+}
+
+.itcost {
+	border-radius: rem(36);
+	filter: drop-shadow(4.357px 6.709px 17.5px rgba(200, 200, 200, 0.51));
+	background-color: #f4f4f4;
+	border: 1.22px solid #c0c1c1;
+	padding: rem(65) rem(45) rem(35);
+
+	@include lg {
+		padding: rem(45) rem(25) rem(25);
+	}
+
+	&_row {
+		display: grid;
+		grid-template-columns: 62fr 38fr;
+		align-items: start;
+		gap: rem(40);
+
+		@include lg {
+			gap: rem(25);
+		}
+
+		@media (max-width: 700px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 2fr;
+		}
+	}
+
+	&_tabs {
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
+	}
+
+	&_tab {
+		display: grid;
+		grid-template-columns: 66fr 33fr;
+		gap: rem(20);
+
+		@media (max-width: 440px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+			gap: rem(0);
+		}
+
+		&:hover {
+			.itcost_rate:before {
+				background: var(--blue);
+			}
+			.itcost_price:before {
+				background: var(--accent);
+			}
+		}
+
+		&.is-active {
+			.itcost_rate {
+				background-color: var(--accent);
+			}
+			.itcost_rate:before {
+				background: var(--accent);
+			}
+
+			.itcost_price {
+				background-color: var(--blue);
+			}
+			.itcost_price:before {
+				background: var(--blue);
+			}
+		}
+	}
+
+	&_rate {
+		--rate-radius: 33px;
+
+		position: relative;
+
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		height: rem(100);
+
+		color: var(--white);
+
+		border-radius: var(--rate-radius);
+		padding-inline: rem(35);
+
+		background-color: var(--blue);
+		transition: all 0.3s ease-in-out;
+
+		@include lg {
+			--rate-radius: 24px;
+			height: rem(80);
+			padding-inline: rem(25);
+		}
+		@media (max-width: 440px) {
+			align-items: center;
+			--rate-radius: 18px;
+			height: rem(65);
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: var(--rate-radius);
+			background: linear-gradient(155deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%);
+		}
+
+		small,
+		strong {
+			display: block;
+		}
+		small {
+			font-size: rem(19);
+			line-height: 133%;
+			font-weight: 400;
+
+			transform: translateY(-17%);
+		}
+		strong {
+			font-size: rem(36);
+			line-height: 100%;
+			font-weight: 700;
+
+			transform: translateY(-17%);
+
+			@include lg {
+				font-size: rem(28);
+			}
+			@media (max-width: 440px) {
+				font-size: rem(32);
+			}
+		}
+	}
+
+	&_price {
+		--price-radius: 33px;
+		position: relative;
+
+		flex-direction: column;
+		justify-content: center;
+		display: inline-flex;
+		height: rem(100);
+
+		font-size: rem(36);
+		font-weight: 900;
+		line-height: 100%;
+
+		color: var(--white);
+
+		border-radius: var(--price-radius);
+		background-color: var(--accent);
+
+		transition: all 0.3s ease-in-out;
+
+		@include lg {
+			--price-radius: 24px;
+			height: rem(80);
+			font-size: rem(28);
+		}
+		@media (max-width: 440px) {
+			--price-radius: 18px;
+			height: rem(65);
+			font-size: rem(36);
+		}
+
+		span {
+			position: relative;
+			z-index: 1;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: var(--price-radius);
+			background: linear-gradient(155deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%);
+		}
+	}
+
+	&_panel {
+		display: inline-flex;
+		flex-direction: column;
+		gap: rem(25);
+
+		font-size: rem(21);
+		letter-spacing: 0;
+		line-height: 110%;
+		color: #131313;
+		font-weight: 300;
+
+		@include lg {
+			font-size: rem(16);
+		}
+	}
+	&_form {
+		display: flex;
+		justify-content: flex-end;
+
+		margin-top: rem(35);
+		@media (max-width: 700px) {
+			justify-content: center;
+		}
+
+		button {
+			--btn-radius: 28px;
+			position: relative;
+
+			height: rem(81);
+			border-radius: var(--btn-radius);
+			background-color: var(--blue);
+
+			padding-inline: rem(100);
+
+			font-size: rem(38);
+			line-height: 120%;
+			font-weight: 700;
+			letter-spacing: 1px;
+
+			color: var(--white);
+
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+
+			@include lg {
+				height: rem(71);
+				font-size: rem(24);
+			}
+			@media (max-width: 700px) {
+				--btn-radius: 22px;
+				height: rem(71);
+				font-size: rem(22);
+				padding-inline: rem(60);
+			}
+			@media (max-width: 440px) {
+				--btn-radius: 18px;
+				font-size: rem(24);
+				padding-inline: rem(55);
+			}
+			span {
+				position: relative;
+				z-index: 1;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: var(--btn-radius);
+				background: linear-gradient(155deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%);
+				transition: all 0.3s ease-in-out;
+			}
+
+			&:hover {
+				&:before {
+					background: var(--blue);
+				}
+			}
+		}
+	}
+}
+
+/* Скрываем все вкладки по умолчанию */
+.tabs-panel {
+	display: none;
+}
+/* Показываем активную вкладку */
+.tabs-panel.is-active {
+	display: inline-flex;
+	animation: fadeIn 0.5s ease-in-out; /* Анимация появления */
+}
+/* Кнопка */
+.tabs-nav button {
+	cursor: pointer;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,167 @@
+/*---------------------------------------------------------------------------------------------------------------------
+BIKE_PARK SECTION
+----------------------------------------------------------------------------------------------------------------------*/
+.section-bike-park {
+	margin-bottom: rem(150);
+
+	@include xl {
+		margin-bottom: rem(100);
+	}
+	@include md {
+		margin-bottom: rem(80);
+	}
+	.section-title {
+		font-size: rem(35);
+		line-height: 100%;
+		font-weight: 800;
+		color: var(--black);
+		text-align: center;
+
+		text-transform: uppercase;
+
+		margin-bottom: rem(30);
+		@include md {
+			font-size: rem(36);
+			margin-bottom: rem(25);
+		}
+
+		@include sm {
+			font-size: rem(28);
+			margin-bottom: rem(20);
+		}
+		@media (max-width:440px) {
+			font-size: rem(21);			
+		}
+
+	}
+}
+
+.bike-park {
+	&_tile {
+		height: rem(144);
+		border-radius: rem(8);
+		border: 1px solid #000;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: right center;
+
+		padding: rem(15) rem(25);
+
+		@include sm{
+			height: rem(120);
+		}
+
+		&.tile-1 {
+			background-image: url("../../images/block-5/tab-1.png");
+		}
+		&.tile-2 {
+			background-image: url("../../images/block-5/tab-2.png");
+		}
+		&.tile-3 {
+			background-image: url("../../images/block-5/tab-3.png");
+		}
+		&.tile-4 {
+			background-image: url("../../images/block-5/tab-4.png");
+
+			.tile-desc {
+				width: 75%;
+				font-weight: 700;
+				@include lg {
+					width: 100%;
+				}
+			}
+			@include sm {
+				margin-top: rem(15);
+			}
+		}
+		.tile-align-center {
+			position: relative;
+			z-index: 1;
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+		.tile-accent {
+			display: inline-flex;
+			align-items: center;
+			min-height: rem(36);
+			border-radius: rem(5);
+			background-color: #ff9933;
+			padding-inline: rem(15);
+
+			font-size: rem(29);
+			letter-spacing: 0;
+			line-height: 150%;
+			color: #333333;
+			font-weight: 400;
+
+			margin-bottom: rem(5);
+
+			@include lg {
+				font-size: rem(22);
+			}
+			@include md {
+				font-size: rem(18);
+			}
+			@include sm {
+				font-size: rem(29);
+			}
+			@media (max-width: 440px) {				
+				font-size: rem(16);			
+			}
+		}
+		.tile-desc {
+			font-size: rem(32);
+			letter-spacing: 0;
+			line-height: 100%;
+			color: var(--white);
+			font-weight: 400;
+			@include lg {
+				font-size: rem(26);
+			}
+			@include md {
+				font-size: rem(23);
+			}
+			@media (max-width: 630px) {
+				font-size: rem(20);
+			}
+			@include sm {
+				font-size: rem(23);
+			}
+			@media (max-width: 440px) {
+				font-size: rem(19);
+			}
+
+		}
+	}
+	&_full {
+		position: relative;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		gap: rem(40);
+
+		@include lg {
+			gap: rem(25);
+		}
+
+		@include sm {
+			gap: rem(15);
+		}
+	}
+	&_bird {
+		min-width: 48%;
+		width: 285px;
+		position: absolute;
+		bottom: 0;
+		right: 50%;
+		transform: translateX(50%);
+		@include sm {		
+			width: rem(130);
+			min-width: rem(130);
+			right: 5%;			
+			transform: translateX(0%);
+		}
+	}
+}
