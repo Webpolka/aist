@@ -1,6 +1,7 @@
 import gulp from "gulp";
 import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
+import groupMedia from 'gulp-group-css-media-queries';
 
 import { filePaths } from "../config/paths.js";
 import { logger } from "../config/logger.js";
@@ -16,6 +17,7 @@ const css = () => {
 				}),
 			])
 		)
+		.pipe(groupMedia())
 		.pipe(gulp.dest(filePaths.build.postcss));
 };
 export { css };

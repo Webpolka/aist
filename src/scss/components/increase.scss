@@ -12,23 +12,25 @@ INCREASE INCOME SECTION
 	}
 	.section-title {
 		font-size: rem(36);
-		line-height: rem(36);
+		line-height: 100%;
 		color: var(--white);
 		font-weight: 700;
 
 		margin-bottom: rem(30);
 
-		@include md {
-			font-size: rem(36);
-			margin-bottom: rem(25);
+		width: 75%;
+
+		@include lg {
+			width: 100%;
+			font-size: rem(28);
 		}
 
-		@include sm {
-			font-size: rem(28);
-			margin-bottom: rem(20);
+		@include md {			
+			font-size: rem(24);
 		}
-		@media (max-width: 440px) {
-			font-size: rem(21);
+		@media (max-width: 440px) {		
+			font-size: rem(20);
+			margin-bottom: rem(20);
 		}
 	}
 }
@@ -46,6 +48,12 @@ INCREASE INCOME SECTION
 
 		transform: translateX(-10%);
 		width: 32%;
+
+		@media (max-width: 675px) {
+			left: inherit;
+			bottom: rem(90);
+			right: 3%;
+		}
 	}
 
 	&-tile {
@@ -60,6 +68,23 @@ INCREASE INCOME SECTION
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		@media (max-width: 830px) {
+			padding-left: rem(80);
+		}
+
+		@include md {
+			padding-left: rem(60);
+		}
+		@media (max-width: 675px) {
+			padding-left: rem(40);
+			width: 100%;
+		}
+		@include sm{
+			padding-top: rem(60);
+		}
+		@media (max-width: 440px) {
+			padding: rem(40) rem(20) rem(20);
+		}
 
 		&:after {
 			content: "";
@@ -75,27 +100,58 @@ INCREASE INCOME SECTION
 			background-position: center center;
 		}
 		&_header {
+			position: relative;
+			z-index: 1;
 			p {
 				font-size: rem(29);
-				line-height: rem(36);
+				line-height: 125%;
 				color: var(--white);
 				font-weight: 300;
+
+				@include lg {
+					font-size: rem(21);
+				}
+				@media (max-width: 440px) {
+					font-size: rem(16);
+				}
 			}
 			.color-accent,
 			.color-blue {
 				font-weight: 300;
 			}
+			@media (max-width: 675px) {
+				width: 75%;
+			}
 		}
 
 		&_footer {
 			display: grid;
-			grid-template-columns: 55fr 45fr;
+			grid-template-columns: 1fr 388px;
 			gap: rem(40);
 			align-items: center;
+
+			margin-top: rem(40);
+
+			@include lg {
+				grid-template-columns: 1fr 278px;
+			}
+			@media (max-width: 830px) {
+				gap: rem(20);
+			}
+			@include md {
+				grid-template-columns: 1fr 238px;
+			}
+			@media (max-width: 540px) {
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr;
+			}
 		}
 
 		&_arrows {
 			width: 100%;
+			@media (max-width: 540px) {
+				display: none;
+			}
 		}
 
 		&_btn {
@@ -118,8 +174,17 @@ INCREASE INCOME SECTION
 			font-weight: 700;
 			text-transform: uppercase;
 
-			box-shadow: 10px 5px 12px 12px rgb(0, 94, 168, 0.9);
-            // transition: all 0.3s ease-in-out;
+			box-shadow: 5px 5px 12px 12px rgb(0, 94, 168, 0.9);
+			// transition: all 0.3s ease-in-out;
+
+			@include lg {
+				height: rem(61);
+				font-size: rem(21);
+			}
+			@include md {
+				height: rem(55);
+				font-size: rem(18);
+			}
 
 			&:before {
 				content: "";
@@ -129,11 +194,11 @@ INCREASE INCOME SECTION
 				right: 0;
 				bottom: 0;
 				border-radius: var(--btn-radius);
-				background: linear-gradient(155deg, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%);               
+				background: linear-gradient(155deg, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%);
 			}
 
 			&:hover {
-                box-shadow: 10px 5px 12px 12px rgb(0, 94, 168, 0.2);
+				box-shadow: 10px 5px px 12px rgb(0, 94, 168, 0.2);
 				&:before {
 					background: transparent;
 				}

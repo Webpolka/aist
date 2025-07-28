@@ -2,7 +2,10 @@
 HEADER
 ----------------------------------------------------------------------------------------------------------------------*/
 .site-header {
-    margin-bottom: rem(50);
+	margin-bottom: rem(50);
+	@include md {
+		margin-bottom: rem(25);
+	}
 	&_row {
 		display: flex;
 		align-items: center;
@@ -75,5 +78,123 @@ HEADER
 				font-size: rem(8);
 			}
 		}
+	}
+}
+/*---------------------------------------------------------------------------------------------------------------------
+BUTTONS
+----------------------------------------------------------------------------------------------------------------------*/
+// Кнопка "Позвонить"
+.btn-call {
+	width: rem(53);
+	height: rem(47);
+	border-radius: rem(16);
+	background-color: var(--bg-tile);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: all 0.3s ease-in-out;
+	@include lg {
+		width: rem(45);
+		height: rem(42);
+	}
+
+	img,
+	svg {
+		width: rem(25);
+		height: rem(25);
+		@include lg {
+			width: rem(20);
+			height: rem(20);
+		}
+	}
+
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+// Кнопка "Продлить аренду"
+.btn-extend-rental {
+	padding: rem(14) rem(18);
+	border-radius: rem(23);
+	background-color: #cfcfcf;
+
+	font-size: rem(16);
+	font-weight: 400;
+	color: var(--black);
+	transition: all 0.3s ease-in-out;
+
+	@include lg {
+		padding: rem(12) rem(12);
+		font-size: rem(13);
+	}
+	@include sm {
+		padding: rem(14) rem(9);
+		width: 100%;
+		text-align: center;
+	}
+
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+// Кнопка "Оставить завку"
+.btn-leave-request {
+	padding: rem(14) rem(18);
+	border-radius: rem(23);
+	background-color: var(--accent);
+
+	font-size: rem(16);
+	font-weight: 400;
+	color: var(--black);
+	transition: all 0.3s ease-in-out;
+
+	@include lg {
+		padding: rem(12) rem(12);
+		font-size: rem(13);
+	}
+	@include sm {
+		padding: rem(14) rem(9);
+		width: 100%;
+		text-align: center;
+	}
+
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+// Кнопка "Опции"
+.btn-options {
+	height: rem(47);
+	width: rem(48);
+	border: 1px solid var(--accent);
+	border-radius: rem(18);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include lg {
+		height: rem(42);
+		width: rem(43);
+		border-radius: rem(14);
+	}
+
+	img,
+	svg {
+		width: rem(26);
+		height: rem(27);
+
+		@include lg {
+			width: rem(21);
+			height: rem(22);
+		}
+	}
+	&:hover {
+		opacity: 0.75;
 	}
 }
