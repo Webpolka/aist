@@ -2,10 +2,10 @@
 REVIEWS SECTION
 ----------------------------------------------------------------------------------------------------------------------*/
 .section-reviews {
-	margin-bottom: rem(150);
+	margin-bottom: rem(120);
 
-	@include sm{
-		margin-bottom: rem(50);
+	@include sm {
+		margin-bottom: rem(80);
 	}
 }
 // Заголовок секции (в нем навигация слайдера)
@@ -56,7 +56,11 @@ REVIEWS SECTION
 		width: rem(92);
 		height: rem(92);
 		overflow: hidden;
-		border-radius: 50%;		
+		border-radius: 50%;
+
+		img {
+			border-radius: 50%;
+		}
 
 		@include sm {
 			width: rem(62);
@@ -76,9 +80,11 @@ REVIEWS SECTION
 	&_author {
 		font-size: rem(22);
 		font-weight: 300;
-		line-height: 175%;
+		// line-height: 175%;
+		min-height: 55px;
 		@include sm {
 			font-size: rem(19);
+			min-height: inherit;
 		}
 	}
 	&_rating .stars {
@@ -105,6 +111,10 @@ REVIEWS SECTION
 		p {
 			font-size: rem(16);
 			font-weight: 200;
+
+			@include sm{
+				font-size: 14px;
+			}
 		}
 	}
 	&_footer {
@@ -149,7 +159,7 @@ REVIEWS SECTION
 	@include sm {
 		transform: translateY(0%);
 		width: rem(45);
-		height: rem(45);		
+		height: rem(45);
 	}
 
 	cursor: pointer;

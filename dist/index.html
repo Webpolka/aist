@@ -1,22 +1,31 @@
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
-	<head>  
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Главная</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="vendor/bootstrap-grid.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    
-  <!-- ВАЖНО ! поставь postcss/main.min.css вместо css/main.min.css если хочешь css с префиксами и медиа (вконце) -->
-   <!-- <link rel="stylesheet" href="postcss/main.min.css"> -->
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Главная</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="./css/main.min.css">       
+	<!-- Buka Links start-->
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Open+Sans&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/jquery.fancybox.css">
 
+	<!-- <link rel="stylesheet" href="/examples/libs/simple-adaptive-slider/simple-adaptive-slider.min.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" /> -->
+	<!-- <link rel="stylesheet" href="./css/slick.css" /> -->
+
+	<!-- Buka Links end-->
+
+	<link rel="stylesheet" href="vendor/bootstrap-grid.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="postcss/main.min.css">
 </head>
- 
- 
+
 
 	<body>
 		<div class="site-wrapper">
@@ -47,8 +56,8 @@
 
 				<!-- HEADER BUTTONS-->
 				<div class="site-header_buttons">
-					<button id="rental-button" class="btn-extend-rental" aria-label="Продлить аренду">Продлить аренду</button>
-					<button id="request-button" class="btn-leave-request" aria-label="Оставить заявку">Оставить заявку</button>
+					<button onclick="document.location='#openModalExtension'" id="rental-button" class="btn-extend-rental" aria-label="Продлить аренду">Продлить аренду</button>
+					<button onclick="document.location='#openModalMessage'" id="request-button" class="btn-leave-request" aria-label="Оставить заявку">Оставить заявку</button>
 					<button id="options-button" class="btn-options" aria-label="Опции">
 						<img src="./icons/tiles.svg" alt="" aria-hidden="true">
 					</button>
@@ -60,14 +69,14 @@
 
 			<main id="primary" class="site-main" role="main">
 				<section class="section-increase-income" aria-labelledby="increase-income">
-	<h2 class="visually-hidden" id="increase-income">Зарабатывай больше вместе с электровелосипедами от компании АИСТ!</h2>
+	<h2 class="visually-hidden" id="increase-income">Зарабатывай больше вместе с электровелосипедами от компании АиСТ!</h2>
 	<div class="container">
 		<div class="increase">
 			<div class="increase-tile">
 				<div class="increase-tile_header">
 					<div class="section-title">
 						Зарабатывай больше
-						вместе с электровелосипедами от компании АИСТ!
+						вместе с электровелосипедами от компании <span class="color-accent">АиСТ</span>!
 					</div>
 					<p>
 						Быстрее доставил — <span class="color-accent">больше</span> заработал! Крути не сам, вези груз
@@ -78,7 +87,7 @@
 					<div class="increase-tile_arrows">
 						<img class="img-responsive" src="./images/block-1/arrows.png" alt="" aria-hidden="true">
 					</div>
-					<a href="#" target="_blank" class="increase-tile_btn"><span>Увеличить доход</span></a>
+					<a href="#openModalMessage" class="increase-tile_btn"><span>Увеличить доход</span></a>
 				</div>
 			</div>
 			<div class="increase-bird">
@@ -87,7 +96,76 @@
 		</div>
 	</div>
 </section>
- <section class="section-it-helps" aria-labelledby="it-helps">
+
+				<section id="monsters" class="section-monsters" aria-labelledby="monsters-park">
+	<h2 class="visually-hidden" id="monsters-park">Парк электроовелосипедов</h2>
+	<div class="container">
+		<div class="section-title">Парк электровелосипедов</div>
+		<div class="monsters-park">
+			<div class="row g-lg-35 g-md-3">
+				<!-- 1 -->
+				<div class="col-sm-6 col-md-4">
+					<div class="monsters-card">
+						<div class="monsters-card-before-1"></div>
+
+						<div class="monsters-card_image">
+							<img src="./images/block-15/monster-truck.webp" alt="Monster Truck">
+						</div>
+						<div class="monsters-card_info">
+							<div class="monsters-card_title">
+								<h2>Monster Truck</h2>
+							</div>
+							<div class="monsters-card_description">
+								<p>2 аккумулятора или 1 увеличенный</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="col-sm-6 col-md-4">
+					<div class="monsters-card">
+						<div class="monsters-card-before-2"></div>
+
+						<div class="monsters-card_image">
+							<img src="./images/block-15/monster-truck-liming.webp" alt="Monster Liming">
+						</div>
+						<div class="monsters-card_info">
+							<div class="monsters-card_title">
+								<h2>Monster Liming</h2>
+							</div>
+							<div class="monsters-card_description">
+								<p>2 аккумулятора</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3 -->
+				<div class="col-md-4 col-sm-12">
+					<div class="monsters-card monsters-card-end">
+						<div class="monsters-card-before-3"></div>
+
+						<div class="monsters-card_image">
+							<img src="./images/block-15/monster-truck-gt.webp" alt="Monster Truck GT">
+						</div>
+						<div class="monsters-card_info">
+							<div class="monsters-card_title">
+								<h2>Monster Truck GT</h2>
+							</div>
+							<div class="monsters-card_description">
+								<p>2 аккумулятора</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+				<section class="section-it-helps" aria-labelledby="it-helps">
 	<h2 class="visually-hidden" id="it-helps">Как АИСТ помогает курьерам зарабатывать больше !</h2>
 	<div class="container">
 		<div class="helps">
@@ -98,7 +176,7 @@
 					<!-- item title -->
 					<div class="helps_col-item col-item-0">
 						<div class="section-title">
-							Как АИСТ помогает курьерам
+							Как <span class="color-accent">АиСТ</span> помогает курьерам
 							<div class="accent-rects">
 								<span class="accent-rects_left">зарабатывать</span>
 								<span class="accent-rects_right">больше :</span>
@@ -215,7 +293,7 @@
 
 					<!-- item Link button-->
 					<div class="helps_col-item col-item-btn">
-						<a href="" target="_blank" class="helps_btn">
+						<a href="#openModalMessage" class="helps_btn">
 							<span>зарабатывать</span>
 						</a>
 					</div>
@@ -312,7 +390,7 @@
 			<div class="itcost_form">
 				<form action="" id="rate-form">
 					<input id="rate-input" type="text" value="" hidden>
-					<button type="submit">
+					<button type="submit" onclick="document.location='#openModalExtension2'">
 						<span>Выбрать</span>
 					</button>
 				</form>
@@ -320,7 +398,8 @@
 		</div>
 	</div>
 </section>
- <section class="section-redemption" aria-labelledby="redemption">
+ 
+				<section class="section-redemption" aria-labelledby="redemption">
 	<h2 class="visually-hidden" id="redemption">Аренда с правом выкупа</h2>
 	<div class="container">
 		<div class="section-title">Аренда с правом выкупа</div>
@@ -383,15 +462,15 @@
 					<div class="bike-park_full">
 						<div class="bike-park_tile tile-1">
 							<h3 class="tile-accent">Monster truck</h3>
-							<p class="tile-desc">2 аккамулятора или 1 увеличенный</p>
+							<p class="tile-desc">2 аккумулятора или 1 увеличенный</p>
 						</div>
 						<div class="bike-park_tile tile-2">
 							<h3 class="tile-accent">Monster Liming</h3>
-							<p class="tile-desc">2 аккамулятора</p>
+							<p class="tile-desc">2 аккумулятора</p>
 						</div>
 						<div class="bike-park_tile tile-3">
 							<h3 class="tile-accent">Monster Non Stop</h3>
-							<p class="tile-desc">2 аккамулятора</p>
+							<p class="tile-desc">2 аккумулятора</p>
 						</div>
 					</div>
 				</div>
@@ -412,7 +491,8 @@
 		</div>
 	</div>
 </section>
- <section id="reviews" class="section-reviews" aria-labelledby="it-reviews">
+ 
+				<section id="reviews" class="section-reviews" aria-labelledby="it-reviews">
 	<h2 class="visually-hidden" id="it-reviews">Отзывы</h2>
 	<div class="container">
 		<div class="reviews-header">
@@ -435,7 +515,7 @@
 				<article class="review-slide swiper-slide" role="group" aria-label="Отзыв 1">
 					<header class="review-slide_header">
 						<div class="review-slide_avatar" aria-hidden="true">
-							<img class="img-responsive" src="./images/block-6/avatar.png" alt="Аватар пользователя">
+							<img class="img-responsive" src="./images/block-6/woman.png" alt="Аватар пользователя">
 						</div>
 						<div class="review-slide_info">
 							<h3 class="review-slide_author">Алина Генералова</h3>
@@ -452,10 +532,10 @@
 						</div>
 					</header>
 					<div class="review-slide_content">
-						<p>Отзыв очень положительный, всё было быстро и качественно. Рекомендую!</p>
+						<p>Замечательный выбор! Экологичный транспорт, экономит время и силы. Заряжается быстро, и дизайн стильный. Рекомендую всем!</p>
 					</div>
 					<footer class="review-slide_footer">
-						<time datetime="2025-04-20">20 апреля 2025</time>
+						<time datetime="2025-04-20">17 июля 2025</time>
 					</footer>
 				</article>
 
@@ -463,7 +543,7 @@
 				<article class="review-slide swiper-slide" role="group" aria-label="Отзыв 2">
 					<header class="review-slide_header">
 						<div class="review-slide_avatar" aria-hidden="true">
-							<img class="img-responsive" src="./images/block-6/avatar.png" alt="Аватар пользователя">
+							<img class="img-responsive" src="./images/block-6/man1.png" alt="Аватар пользователя">
 						</div>
 						<div class="review-slide_info">
 							<h3 class="review-slide_author">Илья Васильев</h3>
@@ -480,7 +560,7 @@
 						</div>
 					</header>
 					<div class="review-slide_content">
-						<p>Отзыв очень положительный, всё было быстро и качественно. Рекомендую!</p>
+						<p>Отличный электровелосипед! Легкий в управлении, быстро заряжается и идеально подходит для ежедневных поездок. Очень доволен покупкой!</p>
 					</div>
 					<footer class="review-slide_footer">
 						<time datetime="2025-04-20">20 апреля 2025</time>
@@ -491,7 +571,7 @@
 				<article class="review-slide swiper-slide" role="group" aria-label="Отзыв 3">
 					<header class="review-slide_header">
 						<div class="review-slide_avatar" aria-hidden="true">
-							<img class="img-responsive" src="./images/block-6/avatar.png" alt="Аватар пользователя">
+							<img class="img-responsive" src="./images/block-6/man2.png" alt="Аватар пользователя">
 						</div>
 						<div class="review-slide_info">
 							<h3 class="review-slide_author">Федор Достоевский</h3>
@@ -507,10 +587,10 @@
 						</div>
 					</header>
 					<div class="review-slide_content">
-						<p>Отзыв очень положительный, всё было быстро и качественно. Рекомендую!</p>
+						<p>Купил электровелосипед здесь — качество на высоте! Удобный, мощный и надежный. Отличный способ передвигаться по городу!!</p>
 					</div>
 					<footer class="review-slide_footer">
-						<time datetime="2025-04-20">20 апреля 2025</time>
+						<time datetime="2025-04-20">2 мая 2025</time>
 					</footer>
 				</article>
 
@@ -598,16 +678,256 @@
 	</div>
 </section>
 
+
+				<section id="partners" class="section-partners" aria-labelledby="it-partners">
+	<h2 class="visually-hidden" id="it-partners">Наши партнеры</h2>
+	<div class="container">
+		<div class="accent-title">Наши партнеры</div>
+		<div class="partners">
+			<div class="row g-2 g-md-4">
+				<!-- 1 -->
+				<div class="col-6">
+					<div class="parteners-card">
+						<div class="partners-card_image">
+							<img src="./images/block-65/vkusvil.png" alt="VkusVill">
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="col-6">
+					<div class="parteners-card">
+						<div class="partners-card_image">
+							<img src="./images/block-65/eda.png" alt="Yandex Eda">
+						</div>
+					</div>
+				</div>
+
+				<!-- 3 -->
+				<div class="col-6">
+					<div class="parteners-card">
+						<div class="partners-card_image">
+							<img src="./images/block-65/lavka.png" alt="Yandex Lavka">
+						</div>
+					</div>
+				</div>
+				<!-- 4 -->
+				<div class="col-6">
+					<div class="parteners-card">
+						<div class="partners-card_image">
+							<img src="./images/block-65/samokat.png" alt="Samokat">
+						</div>
+					</div>
+				</div>
+
+				<!-- 5 -->
+				<div class="col-6">
+					<div class="parteners-card">
+						<div class="partners-card_image">
+							<img src="./images/block-65/x5group.png" alt="x5Group">
+						</div>
+					</div>
+				</div>
+
+				<!-- 6 -->
+				<div class="col-6">
+					<div class="parteners-card">
+						<div class="partners-card_image">
+							<img src="./images/block-65/magnit.png" alt="Magnit">
+						</div>
+					</div>
+				</div>
+
+				<!-- 7 -->
+				<div class="col-12">
+					<div class="parteners-card partners-card-end">
+						<div class="partners-card_image">
+							<img src="./images/block-65/kuper.png" alt="Kuper">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+				<section class="section-map">
+	<h2 class="section-title">Место положение компании в Санкт-Петербурге</h2>
+
+	<div class="section-map_iframe" style="position: relative; overflow: hidden">
+		<a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color: #eee; font-size: 12px; position: absolute; top: 0px">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/prospekt_marshala_zhukova_26_16v/Z0kYdARkTUADQFtjfXR0eH1kYg==/?ll=30.234636%2C59.859001&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=18" style="color: #eee; font-size: 12px; position: absolute; top: 14px">Яндекс Карты — транспорт, навигация, поиск мест</a>
+		<!-- <iframe
+			src="https://yandex.com/map-widget/v1/?ll=30.3159,59.9343&mode=search&oid=1234567890&ol=biz&z=14"
+			allowfullscreen="true"
+			style="position: relative"
+			frameborder="0"
+		></iframe> -->
+
+		<iframe src="https://yandex.ru/map-widget/v1/?ll=30.234636%2C59.859001&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQxOTc0MRJi0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L_RgNC-0YHQv9C10LrRgiDQnNCw0YDRiNCw0LvQsCDQltGD0LrQvtCy0LAsIDI2LzE20JIiCg0r4PFBFcxvb0I%2C&source=serp_navig&z=18" frameborder="1" allowfullscreen="true" style="position: relative"></iframe>
+	</div>
+</section>
+
 			</main>
-			<footer id="colophon" class="site-footer" role="contentinfo">
-    <div class="visually-hidden site-footer_copyright">
+			<footer id="colophon" class="footer">
+    <div class="site-footer_copyright">
         <p>© 2025 Все права защищены.</p>
     </div>
 </footer>
 		</div>
 				
-		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="./js/main.min.js"></script>
+		<div class="btn-up btn-up_hide"></div>
+<div class="none"></div>
+
+<!-- <a class="none" href="#openModalMessage">Открыть модальное окно</a> -->
+<!-- <a class="none"  href="#openPanelka">Открыть модальное окно второе</a> -->
+
+<div id="openModalMessage" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Оставить заявку</h3>
+				<a href="#close" title="Close" class="close">×</a>
+			</div>
+			<div class="modal-body">
+				<form id="FormFeedBackMessage" name="form" method="post">
+					<label>
+						<input class="vaz__input" id="fname" type="text" placeholder="Имя" name="name" maxlength="30" required>
+						<span>Ваше Имя</span>
+					</label>
+					<label>
+						<input class="vaz__input" type="email" placeholder="Email" name="mail">
+						<span>Ваш Email</span>
+					</label>
+					<label>
+						<input class="vaz__input form-control mask-phone" type="tel" placeholder="Номер телефона" name="phone" required>
+						<span>Ваш номер телефона</span>
+					</label>
+					<label>
+						<input class="vaz__input" type="text" placeholder="Сообщение" name="message">
+						<span>Введите сообщение</span>
+					</label>
+					<input id="loading" class="svaz__btn" type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="openModalExtension" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Продлить аренду</h3>
+				<a href="#close" title="Close" class="close">×</a>
+			</div>
+			<div class="modal-body">
+				<form id="FormFeedBackExtension" name="form" method="post">
+					<label>
+						<input class="vaz__input" id="fname" type="text" placeholder="Имя" name="name" maxlength="30" required>
+						<span>Ваше Имя</span>
+					</label>
+					<label>
+						<input class="vaz__input" type="email" placeholder="Email" name="mail">
+						<span>Ваш Email</span>
+					</label>
+					<label>
+						<input class="vaz__input form-control mask-phone" type="tel" placeholder="Номер телефона" name="phone" required>
+						<span>Ваш номер телефона</span>
+					</label>
+					<label>
+						<div class="openModalExtensionRadioСontainer">
+							<h2>Выберите тариф</h2>
+							<div class="openModalExtensionRadio">
+								<input id="radio-1" name="tarif" type="radio" value="MyBlock">
+								<label for="radio-1">
+									<p>Мой район</p>
+									<p>Тариф «мой район» 4500р в неделю</p>
+								</label>
+							</div>
+							<div class="openModalExtensionRadio">
+								<input id="radio-2" name="tarif" type="radio" value="ThePros">
+								<label for="radio-2">
+									<p>Профи</p>
+									<p>Тариф «профи» 3500р в неделю</p>
+								</label>
+							</div>
+							<div class="openModalExtensionRadio">
+								<input id="radio-3" name="tarif" type="radio" value="Own">
+								<label for="radio-3">
+									<p>Как свой</p>
+									<p>Тариф «Как свой» 3700р в неделю</p>
+								</label>
+							</div>
+						</div>
+					</label>
+					<input id="loading2" class="svaz__btn" type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="openModalExtension2" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Оставить заявку</h3>
+				<a href="#close" title="Close" class="close">×</a>
+			</div>
+			<div class="modal-body">
+				<form id="FormFeedBackExtension2" name="form" method="post">
+					<label>
+						<input class="vaz__input" id="fname" type="text" placeholder="Имя" name="name" maxlength="30" required>
+						<span>Ваше Имя</span>
+					</label>
+					<label>
+						<input class="vaz__input" type="email" placeholder="Email" name="mail">
+						<span>Ваш Email</span>
+					</label>
+					<label>
+						<input class="vaz__input form-control mask-phone" type="tel" placeholder="Номер телефона" name="phone" required>
+						<span>Ваш номер телефона</span>
+					</label>
+					<input id="loading3" class="svaz__btn" type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="openPanelka" class="panelka">
+	<div class="pavlene_okoshka">
+		<div class="pavlene_centralu">
+			<div class="pavlene_zagolovok">
+				<h3 class="pavlene_opisaniya">Важное сообщение</h3>
+				<a href="#zavesen" title="Закрыть" class="zavesen">×</a>
+			</div>
+			<div class="panelka-body">
+				<p>
+					Поздравляем! Ваша заявка успешно принята и отправлена.<br>
+					Ждите, в ближайшее время вам перезвонит наш оператор!
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- Buka scripts start-->
+<!-- <script defer src="/examples/libs/simple-adaptive-slider/simple-adaptive-slider.min.js"></script> -->
+<!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- <script src="script.js"></script> -->
+<script src="./js/send.js"></script>
+<script src="./js/jQuery.js"></script>
+<script src="./js/jquery.maskedinput.min.js"></script>
+<script>
+	$(".mask-phone").mask("+7 (999) 999-99-99");
+</script>
+<!-- Buka scripts end -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="vendor/script.js"></script>
 
 	</body>
 </html>

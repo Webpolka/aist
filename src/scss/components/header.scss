@@ -10,6 +10,9 @@ HEADER
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		margin-top: rem(10);
+		
 		@include sm {
 			flex-wrap: wrap;
 		}
@@ -68,14 +71,14 @@ HEADER
 		h1 {
 			margin-top: -4.5%;
 			margin-left: 3%;
-
-			font-size: rem(12.5);
+			
+			font-size: rem(10.5);
 			font-weight: 400;
 			letter-spacing: 1px;
 
 			color: var(--black);
 			@include lg {
-				font-size: rem(8);
+				font-size: rem(6.5);
 			}
 		}
 	}

@@ -1,0 +1,73 @@
+/*---------------------------------------------------------------------------------------------------------------------
+MONSTERS PARK BLOCK 15
+----------------------------------------------------------------------------------------------------------------------*/
+.section-partners {
+	margin-bottom: rem(150);
+
+	@include xl {
+		margin-bottom: rem(100);
+	}
+	@include md {
+		margin-bottom: rem(80);
+	}
+}
+.accent-title {
+	display: inline-flex;
+	align-items: center;
+	min-height: rem(50);
+	border-radius: rem(5);
+	background-color: #ff9933;
+	padding-inline: rem(20);
+
+	font-family: var(--font-title);
+	font-size: rem(42);
+	letter-spacing: 0;
+	font-weight: 700;
+	line-height: 150%;
+	color: white;
+	font-weight: 400;
+
+	margin-bottom: 60px;
+
+	@include md {
+		margin-bottom: 50px;
+		font-size: rem(36);
+	}
+
+	@include sm {
+		margin-bottom: 30px;
+		line-height: 100%;
+		font-size: rem(24);
+	}
+}
+.partners {
+	&-card {
+		display: block;
+		&_image {
+			border-radius: 20px;
+			overflow: hidden;
+			border: 1px solid rgb(0, 0, 0, 0.15);
+            // margin-bottom: rem(20);
+
+            @include sm{
+                border-radius: 10px;
+            }			
+
+			img {
+				transition: all 0.3s ease-in-out;
+
+				display: block;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				overflow: hidden;
+			}
+		}
+		&-end {
+			display: block;
+			max-width: 50%;
+			margin-inline: auto;
+			
+		}
+	}
+}

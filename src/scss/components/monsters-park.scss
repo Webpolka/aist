@@ -1,0 +1,216 @@
+/*---------------------------------------------------------------------------------------------------------------------
+MONSTERS PARK BLOCK 15
+----------------------------------------------------------------------------------------------------------------------*/
+.section-monsters {
+	margin-bottom: rem(150);
+
+	@include xl {
+		margin-bottom: rem(100);
+	}
+	@include md {
+		margin-bottom: rem(80);
+	}
+	.section-title {
+		font-size: rem(35);
+		line-height: 100%;
+		font-weight: 800;
+		color: var(--black);
+		text-align: center;
+
+		text-transform: uppercase;
+
+		margin-bottom: rem(80);
+		@include md {
+			font-size: rem(34);
+			margin-bottom: rem(65);
+		}
+
+		@include sm {
+			font-size: rem(24);
+			margin-bottom: rem(50);
+		}
+		@media (max-width: 440px) {
+			font-size: rem(17);
+		}
+	}
+}
+.monsters {
+	position: relative;
+
+	&-card {
+		--bdrad: 10px;
+
+		position: relative;
+		aspect-ratio: 348/456;
+
+		border-radius: var(--bdrad);
+
+		// Подложка с разноцветными кругами
+		&-before-1,
+		&-before-2,
+		&-before-3 {
+			position: absolute;
+			overflow: hidden;
+			border-radius: var(--bdrad);
+			aspect-ratio: 348/456;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-color: #f2eeeb;
+
+			&:before {
+				position: absolute;
+				content: "";
+				aspect-ratio: 1/1;
+				background-color: #ff9b23;
+				border-radius: 50%;
+			}
+			&:after {
+				position: absolute;
+				content: "";
+				aspect-ratio: 1/1;
+				background-color: #0067d0;
+				border-radius: 50%;
+			}
+		}
+
+		&-before-1 {
+			&:before {
+				width: 110%;
+				right: 0;
+				top: 0;
+				transform: translate(65%, -40%);
+			}
+			&:after {
+				width: 110%;
+				left: 0;
+				bottom: 0;
+				transform: translate(-45%, 10%);
+			}
+		}
+
+		&-before-2 {
+			&:before {
+				width: 80%;
+				right: 0;
+				bottom: 0;
+				transform: translate(40%, 30%);
+			}
+			&:after {
+				width: 120%;
+				left: 0;
+				top: 0;
+				transform: translate(-30%, -35%);
+			}
+		}
+
+		&-before-3 {
+			&:before {
+				width: 110%;
+				right: 0;
+				top: 0;
+				transform: translate(45%, -40%);
+			}
+			&:after {
+				width: 110%;
+				left: 0;
+				bottom: 0;
+				transform: translate(-45%, 40%);
+			}
+		}
+
+		&_image {
+			position: absolute;
+			right: 0;
+			top: -8%;
+			width: 106%;
+			height: auto;
+            z-index: 1;
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				overflow: hidden;
+			}
+		}
+
+		&_info {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			min-height: 24%;
+			background-color: #333333;
+
+			padding: 15px 20px;
+
+			border-bottom-left-radius: var(--bdrad);
+			border-bottom-right-radius: var(--bdrad);
+
+			@include lg {
+				min-height: 27%;
+				padding: 10px 12px;
+			}
+
+			@include md {
+				// min-height: 27%;
+				padding: 15px 20px;
+			}
+		}
+		&_title {
+			display: inline-flex;
+			align-items: center;
+			min-height: rem(36);
+			border-radius: rem(5);
+			background-color: #ff9933;
+			padding-inline: rem(15);
+
+			font-size: rem(22);
+			letter-spacing: 0;
+			line-height: 150%;
+			color: #333333;
+			font-weight: 400;
+
+			margin-bottom: rem(7);
+
+			@include lg {
+				padding-inline: 10px;
+			}
+		}
+		&_description {
+			font-family: var(--font-title);
+			font-size: rem(26);
+			letter-spacing: 0;
+			line-height: 80%;
+			color: var(--white);
+			font-weight: 300;
+
+			@include lg {
+				line-height: 60%;
+			}
+            @include md{
+                line-height: 80%;
+            }
+		}
+	}
+}
+.monsters-card {
+	@include md {
+		margin-bottom: 25px;
+	}
+	@include sm {
+		max-width: 85%;
+		margin-inline: auto;
+		margin-bottom: 35px;
+	}
+}
+.monsters-card-end {
+	@include md {
+		max-width: 50%;
+		margin-inline: auto;
+	}
+	@include sm {
+		max-width: 85%;
+	}
+}

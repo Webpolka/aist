@@ -17,15 +17,15 @@ HOW IT COAST
 		color: var(--black);
 		text-align: center;
 
-		margin-bottom: rem(30);
+		margin-bottom: rem(70);
 		@include md {
 			font-size: rem(36);
-			margin-bottom: rem(25);
+			margin-bottom: rem(45);
 		}
 
 		@include sm {
 			font-size: rem(28);
-			margin-bottom: rem(20);
+			margin-bottom: rem(30);
 		}
 	}
 }
@@ -122,12 +122,12 @@ HOW IT COAST
 		@include lg {
 			--rate-radius: 24px;
 			height: rem(80);
-			padding-inline: rem(25);
+			padding-inline: rem(15);
 		}
 		@media (max-width: 440px) {
 			align-items: center;
 			--rate-radius: 18px;
-			height: rem(65);
+			height: rem(65);			
 		}
 
 		&:before {
@@ -160,10 +160,10 @@ HOW IT COAST
 			transform: translateY(-17%);
 
 			@include lg {
-				font-size: rem(28);
+				font-size: rem(25);
 			}
 			@media (max-width: 440px) {
-				font-size: rem(32);
+				font-size: rem(23);
 			}
 		}
 	}
@@ -229,6 +229,9 @@ HOW IT COAST
 
 		@include lg {
 			font-size: rem(16);
+		}
+		@include sm{
+			font-size: 14px;
 		}
 	}
 	&_form {

@@ -1,0 +1,136 @@
+<div class="btn-up btn-up_hide"></div>
+<div class="none"></div>
+
+<!-- <a class="none" href="#openModalMessage">Открыть модальное окно</a> -->
+<!-- <a class="none"  href="#openPanelka">Открыть модальное окно второе</a> -->
+
+<div id="openModalMessage" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Оставить заявку</h3>
+				<a href="#close" title="Close" class="close">×</a>
+			</div>
+			<div class="modal-body">
+				<form id="FormFeedBackMessage" name="form" method="post">
+					<label>
+						<input class="vaz__input" id="fname" type="text" placeholder="Имя" name="name" maxlength="30" required />
+						<span>Ваше Имя</span>
+					</label>
+					<label>
+						<input class="vaz__input" type="email" placeholder="Email" name="mail" />
+						<span>Ваш Email</span>
+					</label>
+					<label>
+						<input class="vaz__input mask-phone form-control" type="tel" placeholder="Номер телефона" name="phone" required />
+						<span>Ваш номер телефона</span>
+					</label>
+					<label>
+						<input class="vaz__input" type="text" placeholder="Сообщение" name="message" />
+						<span>Введите сообщение</span>
+					</label>
+					<input id="loading" class="svaz__btn" type="submit" value="Отправить" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="openModalExtension" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Продлить аренду</h3>
+				<a href="#close" title="Close" class="close">×</a>
+			</div>
+			<div class="modal-body">
+				<form id="FormFeedBackExtension" name="form" method="post">
+					<label>
+						<input class="vaz__input" id="fname" type="text" placeholder="Имя" name="name" maxlength="30" required />
+						<span>Ваше Имя</span>
+					</label>
+					<label>
+						<input class="vaz__input" type="email" placeholder="Email" name="mail" />
+						<span>Ваш Email</span>
+					</label>
+					<label>
+						<input class="vaz__input mask-phone form-control" type="tel" placeholder="Номер телефона" name="phone" required />
+						<span>Ваш номер телефона</span>
+					</label>
+					<label>
+						<div class="openModalExtensionRadioСontainer">
+							<h2>Выберите тариф</h2>
+							<div class="openModalExtensionRadio">
+								<input id="radio-1" name="tarif" type="radio" value="MyBlock" />
+								<label for="radio-1">
+									<p>Мой район</p>
+									<p>Тариф «мой район» 4500р в неделю</p>
+								</label>
+							</div>
+							<div class="openModalExtensionRadio">
+								<input id="radio-2" name="tarif" type="radio" value="ThePros" />
+								<label for="radio-2">
+									<p>Профи</p>
+									<p>Тариф «профи» 3500р в неделю</p>
+								</label>
+							</div>
+							<div class="openModalExtensionRadio">
+								<input id="radio-3" name="tarif" type="radio" value="Own" />
+								<label for="radio-3">
+									<p>Как свой</p>
+									<p>Тариф «Как свой» 3700р в неделю</p>
+								</label>
+							</div>
+						</div>
+					</label>
+					<input id="loading2" class="svaz__btn" type="submit" value="Отправить" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="openModalExtension2" class="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Оставить заявку</h3>
+				<a href="#close" title="Close" class="close">×</a>
+			</div>
+			<div class="modal-body">
+				<form id="FormFeedBackExtension2" name="form" method="post">
+					<label>
+						<input class="vaz__input" id="fname" type="text" placeholder="Имя" name="name" maxlength="30" required />
+						<span>Ваше Имя</span>
+					</label>
+					<label>
+						<input class="vaz__input" type="email" placeholder="Email" name="mail" />
+						<span>Ваш Email</span>
+					</label>
+					<label>
+						<input class="vaz__input mask-phone form-control" type="tel" placeholder="Номер телефона" name="phone" required />
+						<span>Ваш номер телефона</span>
+					</label>
+					<input id="loading3" class="svaz__btn" type="submit" value="Отправить" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="openPanelka" class="panelka">
+	<div class="pavlene_okoshka">
+		<div class="pavlene_centralu">
+			<div class="pavlene_zagolovok">
+				<h3 class="pavlene_opisaniya">Важное сообщение</h3>
+				<a href="#zavesen" title="Закрыть" class="zavesen">×</a>
+			</div>
+			<div class="panelka-body">
+				<p>
+					Поздравляем! Ваша заявка успешно принята и отправлена.<br />
+					Ждите, в ближайшее время вам перезвонит наш оператор!
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -7,10 +7,14 @@ html {
 
 body {
 	text-wrap: balance;
-	min-width: rem(320);
+	min-width: rem(150);
 }
 
 * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
 	&::-webkit-scrollbar {
 		inline-size: rem(10);
 		background-color: var(--scrollbar);
@@ -56,6 +60,9 @@ body {
 	object-fit: contain;
 	overflow: hidden;
 }
+.posar{
+	position: relative;
+}
 .image-bg {
 	position: relative;
 
@@ -67,6 +74,14 @@ body {
 		block-size: 100%;
 		inline-size: 100%;
 	}
+}
+
+.none {
+	display: none;
+}
+
+.section-title {
+	font-family: "Unbounded", sans-serif;
 }
 
 .visually-hidden {

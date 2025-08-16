@@ -18,7 +18,7 @@ HELPS SECTION
 		color: var(--black);
 		font-weight: 700;
 		@include sm {
-			font-size: rem(26);
+			font-size: rem(25);
 		}
 	}
 	.accent-rects {
@@ -175,7 +175,7 @@ HELPS SECTION
 				width: 100%;
 			}
 			@media (max-width: 440px) {
-				font-size: rem(22);
+				font-size: rem(20);
 			}
 		}
 
@@ -189,6 +189,7 @@ HELPS SECTION
 
 			max-width: rem(400);
 			p {
+				font-family: var(--font-title);
 				font-size: rem(18);
 				letter-spacing: 0;
 				line-height: 100%;
@@ -196,7 +197,7 @@ HELPS SECTION
 				font-weight: 300;
 
 				@media (max-width: 440px) {
-					font-size: rem(16);
+					font-size: rem(14);
 				}
 			}
 		}
@@ -309,7 +310,7 @@ HELPS SECTION
 
 			@media (max-width: 440px) {
 				--btn-radius: 16px;
-				font-size: rem(26);
+				font-size: rem(23);
 				min-height: rem(60);
 			}
 		}

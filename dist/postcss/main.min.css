@@ -56,8 +56,8 @@ ROOT
   --container-width: 1250px;
   --container-padding: 15px;
   --bs-gutter-x: var(--container-padding);
-  --font-main: "Montserrat", sans-serif;
-  --font-title: "Montserrat", sans-serif;
+  --font-main: "Unbounded", sans-serif;
+  --font-title: "Unbounded", sans-serif;
   --white: #ffffff;
   --black: #000000;
   --accent: #ff9548;
@@ -308,7 +308,6 @@ KEYFRAMES
 TYPOGRAPHY
 --------------------------------------------------------------------------------------------------------------------------------*/
 
-h1,
 h2,
 h3,
 h4,
@@ -327,7 +326,14 @@ html {
 
 body {
   text-wrap: balance;
-  min-width: 20rem;
+  min-width: 9.375rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *::-webkit-scrollbar {
@@ -378,6 +384,10 @@ body {
   overflow: hidden;
 }
 
+.posar {
+  position: relative;
+}
+
 .image-bg {
   position: relative;
 }
@@ -390,6 +400,14 @@ body {
   object-fit: cover;
   block-size: 100%;
   inline-size: 100%;
+}
+
+.none {
+  display: none;
+}
+
+.section-title {
+  font-family: "Unbounded", sans-serif;
 }
 
 .visually-hidden {
@@ -475,7 +493,7 @@ BIKE_PARK SECTION
   color: var(--black);
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 1.875rem;
+  margin-bottom: 4.6875rem;
 }
 
 .bike-park_tile {
@@ -594,6 +612,7 @@ HEADER
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-top: 0.625rem;
 }
 
 .site-header .row-group {
@@ -642,7 +661,7 @@ HEADER
 .site-header .logo h1 {
   margin-top: -4.5%;
   margin-left: 3%;
-  font-size: 0.78125rem;
+  font-size: 0.65625rem;
   font-weight: 400;
   letter-spacing: 1px;
   color: var(--black);
@@ -886,6 +905,7 @@ HELPS SECTION
 }
 
 .helps-tile_description p {
+  font-family: var(--font-title);
   font-size: 1.125rem;
   letter-spacing: 0;
   line-height: 100%;
@@ -1001,7 +1021,7 @@ HOW IT COAST
   font-weight: 700;
   color: var(--black);
   text-align: center;
-  margin-bottom: 1.875rem;
+  margin-bottom: 4.375rem;
 }
 
 .itcost {
@@ -1292,7 +1312,11 @@ INCREASE INCOME SECTION
   color: var(--white);
   font-weight: 700;
   margin-bottom: 1.875rem;
-  width: 75%;
+  width: 77%;
+}
+
+.section-increase-income .section-title .color-accent {
+  font-weight: 700;
 }
 
 .increase {
@@ -1355,6 +1379,7 @@ INCREASE INCOME SECTION
 }
 
 .increase-tile_header p {
+  font-family: var(--font-title);
   font-size: 1.8125rem;
   line-height: 125%;
   color: var(--white);
@@ -1398,7 +1423,7 @@ INCREASE INCOME SECTION
   -ms-flex-pack: center;
   justify-content: center;
   padding-inline: 1.25rem;
-  font-size: 1.8125rem;
+  font-size: 1.625rem;
   color: var(--white);
   font-weight: 700;
   text-transform: uppercase;
@@ -1426,6 +1451,255 @@ INCREASE INCOME SECTION
   background: transparent;
 }
 
+.section-map .section-title {
+  font-size: 2.1875rem;
+  line-height: 100%;
+  font-weight: 800;
+  color: var(--black);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 4.375rem;
+}
+
+.section-map_iframe {
+  border-top: 2px solid rgba(0, 103, 208, 0.35);
+}
+
+.section-map_iframe iframe {
+  width: 100%;
+  height: 500px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------
+MONSTERS PARK BLOCK 15
+----------------------------------------------------------------------------------------------------------------------*/
+
+.section-monsters {
+  margin-bottom: 9.375rem;
+}
+
+.section-monsters .section-title {
+  font-size: 2.1875rem;
+  line-height: 100%;
+  font-weight: 800;
+  color: var(--black);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+.monsters {
+  position: relative;
+}
+
+.monsters-card {
+  --bdrad: 10px;
+  position: relative;
+  aspect-ratio: 348/456;
+  border-radius: var(--bdrad);
+}
+
+.monsters-card-before-1,
+.monsters-card-before-2,
+.monsters-card-before-3 {
+  position: absolute;
+  overflow: hidden;
+  border-radius: var(--bdrad);
+  aspect-ratio: 348/456;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #f2eeeb;
+}
+
+.monsters-card-before-1:before,
+.monsters-card-before-2:before,
+.monsters-card-before-3:before {
+  position: absolute;
+  content: "";
+  aspect-ratio: 1/1;
+  background-color: #ff9b23;
+  border-radius: 50%;
+}
+
+.monsters-card-before-1:after,
+.monsters-card-before-2:after,
+.monsters-card-before-3:after {
+  position: absolute;
+  content: "";
+  aspect-ratio: 1/1;
+  background-color: #0067d0;
+  border-radius: 50%;
+}
+
+.monsters-card-before-1:before {
+  width: 110%;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(65%, -40%);
+  -ms-transform: translate(65%, -40%);
+  transform: translate(65%, -40%);
+}
+
+.monsters-card-before-1:after {
+  width: 110%;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-45%, 10%);
+  -ms-transform: translate(-45%, 10%);
+  transform: translate(-45%, 10%);
+}
+
+.monsters-card-before-2:before {
+  width: 80%;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(40%, 30%);
+  -ms-transform: translate(40%, 30%);
+  transform: translate(40%, 30%);
+}
+
+.monsters-card-before-2:after {
+  width: 120%;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-30%, -35%);
+  -ms-transform: translate(-30%, -35%);
+  transform: translate(-30%, -35%);
+}
+
+.monsters-card-before-3:before {
+  width: 110%;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(45%, -40%);
+  -ms-transform: translate(45%, -40%);
+  transform: translate(45%, -40%);
+}
+
+.monsters-card-before-3:after {
+  width: 110%;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-45%, 40%);
+  -ms-transform: translate(-45%, 40%);
+  transform: translate(-45%, 40%);
+}
+
+.monsters-card_image {
+  position: absolute;
+  right: 0;
+  top: -8%;
+  width: 106%;
+  height: auto;
+  z-index: 1;
+}
+
+.monsters-card_image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.monsters-card_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 24%;
+  background-color: #333333;
+  padding: 15px 20px;
+  border-bottom-left-radius: var(--bdrad);
+  border-bottom-right-radius: var(--bdrad);
+}
+
+.monsters-card_title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 2.25rem;
+  border-radius: 0.3125rem;
+  background-color: #ff9933;
+  padding-inline: 0.9375rem;
+  font-size: 1.375rem;
+  letter-spacing: 0;
+  line-height: 150%;
+  color: #333333;
+  font-weight: 400;
+  margin-bottom: 0.4375rem;
+}
+
+.monsters-card_description {
+  font-family: var(--font-title);
+  font-size: 1.625rem;
+  letter-spacing: 0;
+  line-height: 80%;
+  color: var(--white);
+  font-weight: 300;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------
+MONSTERS PARK BLOCK 15
+----------------------------------------------------------------------------------------------------------------------*/
+
+.section-partners {
+  margin-bottom: 9.375rem;
+}
+
+.accent-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3.125rem;
+  border-radius: 0.3125rem;
+  background-color: #ff9933;
+  padding-inline: 1.25rem;
+  font-family: var(--font-title);
+  font-size: 2.625rem;
+  letter-spacing: 0;
+  font-weight: 700;
+  line-height: 150%;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.partners-card {
+  display: block;
+}
+
+.partners-card_image {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.partners-card_image img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.partners-card-end {
+  display: block;
+  max-width: 50%;
+  margin-inline: auto;
+}
+
 /*---------------------------------------------------------------------------------------------------------------------
 RENTAL AND REDEMPTION SECTION
 ----------------------------------------------------------------------------------------------------------------------*/
@@ -1441,7 +1715,7 @@ RENTAL AND REDEMPTION SECTION
   color: var(--black);
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 2.8125rem;
+  margin-bottom: 4.375rem;
 }
 
 .redemption {
@@ -1518,6 +1792,7 @@ RENTAL AND REDEMPTION SECTION
   top: 0;
   left: 0;
   width: 64%;
+  padding-inline: 15px;
 }
 
 .redemption_col .blue-item {
@@ -1526,9 +1801,9 @@ RENTAL AND REDEMPTION SECTION
 }
 
 .redemption .black-item {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   letter-spacing: 0px;
-  line-height: 1.8125rem;
+  line-height: 120%;
   color: #ffffff;
   font-weight: 800;
   display: -webkit-box;
@@ -1554,6 +1829,7 @@ RENTAL AND REDEMPTION SECTION
   letter-spacing: 0;
   font-weight: 200;
   text-align: center;
+  line-height: 160%;
 }
 
 .redemption .black-item strong {
@@ -1565,7 +1841,7 @@ RENTAL AND REDEMPTION SECTION
 }
 
 .redemption .blue-item {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   letter-spacing: 0px;
   line-height: 1.8125rem;
   color: #ffffff;
@@ -1592,7 +1868,7 @@ REVIEWS SECTION
 ----------------------------------------------------------------------------------------------------------------------*/
 
 .section-reviews {
-  margin-bottom: 9.375rem;
+  margin-bottom: 7.5rem;
 }
 
 .reviews-header {
@@ -1640,6 +1916,10 @@ REVIEWS SECTION
   border-radius: 50%;
 }
 
+.review-slide_avatar img {
+  border-radius: 50%;
+}
+
 .review-slide_info {
   color: var(--black);
   padding-top: 0.3125rem;
@@ -1656,7 +1936,7 @@ REVIEWS SECTION
 .review-slide_author {
   font-size: 1.375rem;
   font-weight: 300;
-  line-height: 175%;
+  min-height: 55px;
 }
 
 .review-slide_rating .stars {
@@ -1884,6 +2164,490 @@ COOKIES
 ALL MEDIAQUERIES
 --------------------------------------------------------------------------------------------------------------------------------*/
 
+/* ------------------------------------------------------------------------------------------------------------------------------
+BUKA STYLES BOTTOM
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.svaz {
+  padding: 50px 0 50px;
+  background-color: #2486ff;
+}
+
+.svaz__title {
+  color: #efd405;
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.svaz__text {
+  color: #efd405;
+  margin-bottom: 15px;
+}
+
+.svaz__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.svaz__btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+form label {
+  position: relative;
+  display: block;
+}
+
+form label input {
+  font: 18px Helvetica, Arial, sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  background: transparent;
+  display: block;
+  padding: 20px;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  outline: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+form label input::-webkit-input-placeholder {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.6);
+  font: 18px Helvetica, Arial, sans-serif;
+}
+
+form label input::-moz-placeholder {
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.6);
+  font: 18px Helvetica, Arial, sans-serif;
+}
+
+form label input:-ms-input-placeholder {
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.6);
+  font: 18px Helvetica, Arial, sans-serif;
+}
+
+form label input::-ms-input-placeholder {
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.6);
+  font: 18px Helvetica, Arial, sans-serif;
+}
+
+form label input::placeholder {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.6);
+  font: 18px Helvetica, Arial, sans-serif;
+}
+
+form label input:focus,
+form label input:active {
+  -webkit-box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+}
+
+form label input:focus,
+form label input:active,
+form label input.populated {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+
+form label input:focus::-webkit-input-placeholder,
+form label input:active::-webkit-input-placeholder,
+form label input.populated::-webkit-input-placeholder {
+  color: transparent;
+}
+
+form label input:focus::-moz-placeholder,
+form label input:active::-moz-placeholder,
+form label input.populated::-moz-placeholder {
+  color: transparent;
+}
+
+form label input:focus:-ms-input-placeholder,
+form label input:active:-ms-input-placeholder,
+form label input.populated:-ms-input-placeholder {
+  color: transparent;
+}
+
+form label input:focus::-ms-input-placeholder,
+form label input:active::-ms-input-placeholder,
+form label input.populated::-ms-input-placeholder {
+  color: transparent;
+}
+
+form label input:focus::placeholder,
+form label input:active::placeholder,
+form label input.populated::placeholder {
+  color: transparent;
+}
+
+form label input:focus + span,
+form label input:active + span,
+form label input.populated + span {
+  opacity: 1;
+  top: 10px;
+}
+
+form label span {
+  color: rgba(255, 255, 255, 0.6);
+  font: 13px Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+form input[type=submit] {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font: 18px Helvetica, Arial, sans-serif;
+  border: none;
+  border-radius: 10px;
+  background: #ff9548;
+  color: #fff;
+  padding: 16px 40px;
+  cursor: pointer;
+}
+
+form input[type=submit]:hover {
+  background: #109f67;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #376ed4;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  outline: 0;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid rgba(236, 238, 239, 0.25);
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* asf */
+
+.openModalExtensionRadioСontainer {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  width: 450px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  outline: none;
+}
+
+.openModalExtensionRadioСontainer h2 {
+  margin-bottom: 10px;
+}
+
+.openModalExtensionRadio {
+  padding-bottom: 10px;
+  /* border: 2px solid #fff;
+   border-radius: 6px; */
+}
+
+.openModalExtensionRadio input[type=radio] {
+  display: none;
+}
+
+.openModalExtensionRadio label {
+  cursor: pointer;
+  padding: 0px 15px;
+  line-height: 34px;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.openModalExtensionRadio input[type=radio]:checked + label {
+  background: var(--accent);
+}
+
+.openModalExtensionRadio label:hover {
+  color: #fff;
+}
+
+/* ads */
+
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.close:focus,
+.close:hover {
+  color: #ff9548;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
+.panelka {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+
+.panelka:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.pavlene_okoshka {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+.pavlene_centralu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #1e6bfb;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  outline: 0;
+}
+
+.pavlene_zagolovok {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+
+.pavlene_opisaniya {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.zavesen {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.zavesen:focus,
+.zavesen:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.panelka-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
+.footer {
+  padding: 50px 0 50px;
+  background-color: #1e6bfb;
+}
+
+.footer p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+
+  .pavlene_okoshka {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .pavlene_centralu {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 769px) {
+  .g-lg-35,
+  .gx-lg-35 {
+    --bs-gutter-x: 35px;
+  }
+
+  .g-lg-35,
+  .gy-lg-35 {
+    --bs-gutter-y: 35px;
+  }
+}
+
 @media (max-width: 1200px) {
   .section-bike-park {
     margin-bottom: 6.25rem;
@@ -1899,6 +2663,14 @@ ALL MEDIAQUERIES
 
   .section-increase-income {
     margin-bottom: 7.5rem;
+  }
+
+  .section-monsters {
+    margin-bottom: 6.25rem;
+  }
+
+  .section-partners {
+    margin-bottom: 6.25rem;
   }
 
   .section-redemption {
@@ -1947,7 +2719,7 @@ ALL MEDIAQUERIES
   }
 
   .site-header .logo h1 {
-    font-size: 0.5rem;
+    font-size: 0.40625rem;
   }
 
   .btn-call {
@@ -2004,11 +2776,11 @@ ALL MEDIAQUERIES
   .itcost_rate {
     --rate-radius: 24px;
     height: 5rem;
-    padding-inline: 1.5625rem;
+    padding-inline: 0.9375rem;
   }
 
   .itcost_rate strong {
-    font-size: 1.75rem;
+    font-size: 1.5625rem;
   }
 
   .itcost_price {
@@ -2041,7 +2813,20 @@ ALL MEDIAQUERIES
 
   .increase-tile_btn {
     height: 3.8125rem;
-    font-size: 1.3125rem;
+    font-size: 1.125rem;
+  }
+
+  .monsters-card_info {
+    min-height: 27%;
+    padding: 10px 12px;
+  }
+
+  .monsters-card_title {
+    padding-inline: 10px;
+  }
+
+  .monsters-card_description {
+    line-height: 60%;
   }
 
   .redemption_row {
@@ -2080,7 +2865,7 @@ ALL MEDIAQUERIES
 
   .section-bike-park .section-title {
     font-size: 2.25rem;
-    margin-bottom: 1.5625rem;
+    margin-bottom: 2.8125rem;
   }
 
   .bike-park_tile .tile-accent {
@@ -2135,7 +2920,7 @@ ALL MEDIAQUERIES
 
   .section-cost .section-title {
     font-size: 2.25rem;
-    margin-bottom: 1.5625rem;
+    margin-bottom: 2.8125rem;
   }
 
   .section-increase-income {
@@ -2156,7 +2941,51 @@ ALL MEDIAQUERIES
 
   .increase-tile_btn {
     height: 3.4375rem;
-    font-size: 1.125rem;
+    font-size: 0.9375rem;
+  }
+
+  .section-map .section-title {
+    font-size: 2.125rem;
+    margin-bottom: 4.0625rem;
+  }
+
+  .section-map_iframe iframe {
+    height: 350px;
+  }
+
+  .section-monsters {
+    margin-bottom: 5rem;
+  }
+
+  .section-monsters .section-title {
+    font-size: 2.125rem;
+    margin-bottom: 4.0625rem;
+  }
+
+  .monsters-card_info {
+    padding: 15px 20px;
+  }
+
+  .monsters-card_description {
+    line-height: 80%;
+  }
+
+  .monsters-card {
+    margin-bottom: 25px;
+  }
+
+  .monsters-card-end {
+    max-width: 50%;
+    margin-inline: auto;
+  }
+
+  .section-partners {
+    margin-bottom: 5rem;
+  }
+
+  .accent-title {
+    margin-bottom: 50px;
+    font-size: 2.25rem;
   }
 
   .section-redemption {
@@ -2166,7 +2995,7 @@ ALL MEDIAQUERIES
   .section-redemption h2,
   .section-redemption .section-title {
     font-size: 2.25rem;
-    margin-bottom: 2.1875rem;
+    margin-bottom: 2.8125rem;
   }
 
   .reviews-header {
@@ -2182,7 +3011,7 @@ ALL MEDIAQUERIES
 @media (max-width: 710px) {
   .redemption_grid .black-item small,
   .redemption_grid .black-item strong {
-    line-height: 125%;
+    line-height: 105%;
   }
 
   .redemption .black-item {
@@ -2264,7 +3093,7 @@ ALL MEDIAQUERIES
 
   .section-bike-park .section-title {
     font-size: 1.75rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.1875rem;
   }
 
   .bike-park_tile {
@@ -2326,7 +3155,7 @@ ALL MEDIAQUERIES
   }
 
   .helps .section-title {
-    font-size: 1.625rem;
+    font-size: 1.5625rem;
   }
 
   .helps-tile_bird {
@@ -2343,17 +3172,55 @@ ALL MEDIAQUERIES
 
   .section-cost .section-title {
     font-size: 1.75rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .itcost_panel {
+    font-size: 14px;
   }
 
   .increase-tile {
     padding-top: 3.75rem;
   }
 
+  .section-map .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 2.1875rem;
+  }
+
+  .section-map_iframe iframe {
+    height: 250px;
+  }
+
+  .section-monsters .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 3.125rem;
+  }
+
+  .monsters-card {
+    max-width: 85%;
+    margin-inline: auto;
+    margin-bottom: 35px;
+  }
+
+  .monsters-card-end {
+    max-width: 85%;
+  }
+
+  .accent-title {
+    margin-bottom: 30px;
+    line-height: 100%;
+    font-size: 1.5rem;
+  }
+
+  .partners-card_image {
+    border-radius: 10px;
+  }
+
   .section-redemption h2,
   .section-redemption .section-title {
     font-size: 1.75rem;
-    margin-bottom: 1.875rem;
+    margin-bottom: 2.5rem;
   }
 
   .redemption_grid {
@@ -2361,7 +3228,7 @@ ALL MEDIAQUERIES
   }
 
   .section-reviews {
-    margin-bottom: 3.125rem;
+    margin-bottom: 5rem;
   }
 
   .reviews-header {
@@ -2380,12 +3247,17 @@ ALL MEDIAQUERIES
 
   .review-slide_author {
     font-size: 1.1875rem;
+    min-height: inherit;
   }
 
   .review-slide_rating .stars img,
   .review-slide_rating .stars svg {
     width: 1.6875rem;
     height: 1.6875rem;
+  }
+
+  .review-slide_content p {
+    font-size: 14px;
   }
 
   .swiper-navigation {
@@ -2419,6 +3291,10 @@ ALL MEDIAQUERIES
   .cookies-popup-ht15zxx.cookies-popup_show-ht15zxx {
     bottom: 0;
   }
+
+  .footer p {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -2448,7 +3324,7 @@ ALL MEDIAQUERIES
   }
 
   .redemption .black-item strong {
-    font-size: 1.3125rem;
+    font-size: 1.1875rem;
   }
 
   .redemption .blue-item {
@@ -2466,7 +3342,7 @@ ALL MEDIAQUERIES
 
 @media (max-width: 440px) {
   .section-bike-park .section-title {
-    font-size: 1.3125rem;
+    font-size: 1.0625rem;
   }
 
   .bike-park_tile .tile-accent {
@@ -2478,16 +3354,16 @@ ALL MEDIAQUERIES
   }
 
   .helps-tile_title {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
 
   .helps-tile_description p {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .helps .col-item-btn .helps_btn {
     --btn-radius: 16px;
-    font-size: 1.625rem;
+    font-size: 1.4375rem;
     min-height: 3.75rem;
   }
 
@@ -2506,7 +3382,7 @@ ALL MEDIAQUERIES
   }
 
   .itcost_rate strong {
-    font-size: 2rem;
+    font-size: 1.4375rem;
   }
 
   .itcost_price {
@@ -2522,7 +3398,8 @@ ALL MEDIAQUERIES
   }
 
   .section-increase-income .section-title {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
     margin-bottom: 1.25rem;
   }
 
@@ -2531,7 +3408,15 @@ ALL MEDIAQUERIES
   }
 
   .increase-tile_header p {
-    font-size: 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .section-map .section-title {
+    font-size: 1.125rem;
+  }
+
+  .section-monsters .section-title {
+    font-size: 1.0625rem;
   }
 
   .redemption .black-item {
